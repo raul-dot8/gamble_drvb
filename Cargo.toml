@@ -1,0 +1,19 @@
+[package]
+name = "gamble_drv"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+base45 = "3.2.0"
+ciborium = "0.2.2"
+clap = { version = "4.6.1", features = ["derive"] }
+crossterm = "0.29.0"
+facet = "0.46.5"
+facet-yaml = "0.46.1"
+fast_qr = { version = "0.13.1", features = ["svg"] }
+image = "0.25.10"
+imageproc = "0.27.0"
+nokhwa = { version = "0.10.11", features = ["input-native"]}
+rand = { version = "0.10.1", features = ["alloc"] }
+rqrr = "0.10.1"
+text_io = "0.1.13"
