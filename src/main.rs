@@ -41,7 +41,7 @@ struct Args {
     find_camera: bool,
     #[arg(short='s', long="save-pp", default_value_t = false, help="Save the QR code photo for preprocessor tuning")]
     save_photo: bool,
-    #[arg(short='c', long="config-loc", default_value = "src/config.yaml", help="The location of the config.yaml file")]
+    #[arg(short='c', long="config-loc", default_value = "config.yaml", help="The location of the config.yaml file")]
     config_location: String
 }
 

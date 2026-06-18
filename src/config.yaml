@@ -1,4 +1,4 @@
-qr_decode: C:\Users\peica\Desktop\gamble_drv\qr_code\b64qr.txt
+qr_decode: b64qr.txt
 camera_index: 0
 preprocessing:
   block_size: 10
