@@ -1,5 +1,5 @@
 qr_decode: b64qr.txt
 camera_index: 0
 preprocessing:
-  block_size: 10
+  block_size: 18
   delta: 2
