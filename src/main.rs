@@ -41,7 +41,7 @@ struct Args {
     find_camera: bool,
     #[arg(short='s', long="save-pp", default_value_t = false, help="Save the QR code photo for preprocessor tuning")]
     save_photo: bool,
-    #[arg(short='c', long="config-loc", default_value = "config.yaml", help="The location of the config.yaml file")]
+    #[arg(short='c', long="config-loc", default_value = "src/config.yaml", help="The location of the config.yaml file")]
     config_location: String
 }
 
@@ -84,7 +84,7 @@ fn get_picture(config: &Config) -> image::ImageBuffer<image::Luma<u8>, Vec<u8>> 
     let index = CameraIndex::Index(config.camera_index);
     let requested = RequestedFormat::new::<LumaFormat>(RequestedFormatType::AbsoluteHighestResolution); // Create our requested format
     let mut camera = Camera::new(index, requested).expect("Open camera"); // Open the camera
-
+    camera.open_stream().unwrap();
     let frame = camera.frame().expect("Capture a frame"); // Get one frame
 
     let mut image = frame.decode_image::<LumaFormat>().expect("Decode picture"); // Turn the frame into a Luma format for rqrr

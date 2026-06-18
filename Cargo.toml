@@ -13,7 +13,7 @@ facet-yaml = "0.46.1"
 fast_qr = { version = "0.13.1", features = ["svg"] }
 image = "0.25.10"
 imageproc = "0.27.0"
-nokhwa = { version = "0.10.11", features = ["input-native"]}
+nokhwa = { version = "0.10.11", features = ["input-native", "input-v4l"] }
 rand = { version = "0.10.1", features = ["alloc"] }
 rqrr = "0.10.1"
 text_io = "0.1.13"
